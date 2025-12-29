@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Selva y Yo | Tours en Tingo María</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2D5A27;
+            --accent-orange: #F28C28;
+            --soft-white: #F9FAFB;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1589909202802-8f4aadce1849?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        .card-tour {
+            transition: all 0.3s ease;
+        }
+        .card-tour:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .section-zig-zag:nth-child(even) .flex-row-reverse-md {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-green-800">Mi Selva <span class="text-orange-500">&</span> Yo</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#inicio" class="hover:text-green-700 font-medium">Inicio</a>
+                        <a href="#experiencias" class="hover:text-green-700 font-medium">Experiencias</a>
+                        <a href="#paquetes" class="hover:text-green-700 font-medium">Paquetes</a>
+                        <a href="#contacto" class="bg-green-700 text-white px-5 py-2 rounded-full hover:bg-green-800 transition">¡Reservar ya!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Vive Tingo María como nunca antes</h1>
+            <p class="text-xl md:text-2xl mb-10 font-light italic">Naturaleza, aventura y experiencias reales</p>
+            <p class="max-w-2xl mx-auto text-lg mb-10 text-gray-200">
+                Paquetes turísticos completos con guías locales, actividades de aventura y los mejores paisajes de la selva central del Perú.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#paquetes" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold transition">👉 Ver paquetes</a>
+                <a href="https://wa.me/51999999999" class="bg-white hover:bg-gray-100 text-green-800 px-8 py-4 rounded-full text-lg font-bold transition flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Reservar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Conexión Emocional -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-green-900 mb-8">¿POR QUÉ TINGO MARÍA?</h2>
+            <p class="text-xl leading-relaxed text-gray-600 mb-12">
+                Tingo María no es un destino turístico más. Es el lugar donde vuelves a sentirte vivo, donde la selva te envuelve, el agua te renueva y la aventura despierta tus sentidos.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6">
+                    <div class="text-orange-500 text-4xl mb-4"><i class="fas fa-hiking"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Ideal para aventureros</h3>
+                    <p class="text-gray-500 text-sm">Rutas desafiantes y adrenalina pura en cada rincón.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-orange-500 text-4xl mb-4"><i class="fas fa-heart"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Perfecto para parejas</h3>
+                    <h3 class="font-bold text-xl mb-2"></h3>
+                    <p class="text-gray-500 text-sm">Atardeceres mágicos y rincones íntimos en la naturaleza.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-orange-500 text-4xl mb-4"><i class="fas fa-users"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Seguro para familias</h3>
+                    <p class="text-gray-500 text-sm">Actividades diseñadas para el disfrute de grandes y chicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Experiencias Detalladas (Zig-Zag) -->
+    <section id="experiencias" class="py-10">
+        
+        <!-- Paquete 1 -->
+        <div class="section-zig-zag py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Aventura Subterránea</span>
+                    <h2 class="text-4xl font-bold text-green-900 mt-2 mb-6">Misterios de la Cueva y Dulzura</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Explora la majestuosa <strong>Cueva de las Lechuzas</strong>, un ecosistema único donde el tiempo parece detenerse. Después, sumérgete en las <strong>Aguas Sulfurosas</strong>, famosas por sus propiedades medicinales que renovarán tu piel y espíritu. Finalizamos con una visita a la <strong>Fábrica de Chocolate</strong> local, donde conocerás el proceso del cacao desde la semilla hasta el paladar.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Espeleología guiada</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Baño relajante medicinal</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Degustación de cacao puro</li>
+                    </ul>
+                    <a href="https://wa.me/51999999999" class="inline-block bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900">Más información</a>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cueva de las Lechuzas" class="rounded-2xl shadow-2xl object-cover h-[400px] w-full">
+                </div>
+            </div>
+        </div>
+
+        <!-- Paquete 2 (Invertido) -->
+        <div class="section-zig-zag py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Adrenalina Pura</span>
+                    <h2 class="text-4xl font-bold text-green-900 mt-2 mb-6">Ruta de las Ninfas y Cascadas</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Un día de conexión total con la biodiversidad en la <strong>UNAS</strong> (Zoológico y Jardín Botánico). Pero prepárate, porque la emoción sube de nivel en <strong>Honolulu</strong> y la <strong>Catarata de las Ninfas</strong>, donde podrás escalar paredes de roca y volar entre los árboles con el canopy. Cerramos con la serenidad de las <strong>Cataratas Santa Carmen</strong>.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Escalada en roca asistida</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Canopy extremo</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Avistamiento de especies</li>
+                    </ul>
+                    <a href="https://wa.me/51999999999" class="inline-block bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900">Consultar disponibilidad</a>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cascadas Tingo Maria" class="rounded-2xl shadow-2xl object-cover h-[400px] w-full">
+                </div>
+            </div>
+        </div>
+
+        <!-- Paquete 3 -->
+        <div class="section-zig-zag py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Naturaleza y Relax</span>
+                    <h2 class="text-4xl font-bold text-green-900 mt-2 mb-6">El Espejo de los Milagros</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Iniciamos en el <strong>Mariposario Montealto</strong> rodeados de colores vibrantes. Luego, pasaremos el día en la <strong>Laguna de los Milagros</strong>: natación, paseo en bote, canoa y para los valientes, canopy extremo sobre el agua. Terminamos el día con la vista más icónica en el <strong>Mirador de la Bella Durmiente</strong>.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Paseo en bote y canoa</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Almuerzo típico incluido</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Fotografía en el mirador</li>
+                    </ul>
+                    <a href="https://wa.me/51999999999" class="inline-block bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900">Reservar Ahora</a>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laguna de los Milagros" class="rounded-2xl shadow-2xl object-cover h-[400px] w-full">
+                </div>
+            </div>
+        </div>
+
+        <!-- Paquete 4 (Invertido) -->
+        <div class="section-zig-zag py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Diversión Familiar</span>
+                    <h2 class="text-4xl font-bold text-green-900 mt-2 mb-6">Villaverde y Aguas Cristalinas</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Descubre <strong>Villaverde</strong>, el paraíso de los niños con paseos en bote y mariposario dedicado. Continúa la frescura en la famosa <strong>Cueva de las Pavas</strong>, el balneario natural por excelencia para nadar en aguas cristalinas. Cerramos con un paseo relajante por la <strong>Alameda Perú</strong>, el corazón social de la ciudad.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Actividades infantiles</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Baño en pozas naturales</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> City tour incluido</li>
+                    </ul>
+                    <a href="https://wa.me/51999999999" class="inline-block bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-900">Ver detalles</a>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1544123232-37418f449dc4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cueva de las Pavas" class="rounded-2xl shadow-2xl object-cover h-[400px] w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cards de Paquetes (Resumen) -->
+    <section id="paquetes" class="py-20 bg-green-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Elige tu Aventura</h2>
+                <p class="text-green-200">Paquetes diseñados para maximizar tu experiencia.</p>
+                <div class="inline-block mt-6 bg-orange-500 text-white px-6 py-2 rounded-full font-bold animate-pulse">
+                    🔥 PROMOCIÓN: Reserva +3 días y obtén 15% DCTO por persona
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white text-gray-800 p-6 rounded-2xl card-tour">
+                    <h3 class="font-bold text-xl mb-4 text-green-800">Paquete 1: Místico</h3>
+                    <ul class="text-sm space-y-2 mb-6 text-gray-600">
+                        <li>• Cueva de las Lechuzas</li>
+                        <li>• Aguas Sulfurosas</li>
+                        <li>• Fábrica de Chocolate</li>
+                    </ul>
+                    <div class="text-2xl font-bold text-orange-600 mb-6 text-center">S/ 80.00 <span class="text-sm text-gray-400">/persona</span></div>
+                    <a href="https://wa.me/51999999999?text=Hola,%20quiero%20reservar%20el%20Paquete%201" class="block w-full text-center bg-green-700 text-white py-3 rounded-xl font-bold hover:bg-green-800">Reservar ahora</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white text-gray-800 p-6 rounded-2xl card-tour">
+                    <h3 class="font-bold text-xl mb-4 text-green-800">Paquete 2: Extremo</h3>
+                    <ul class="text-sm space-y-2 mb-6 text-gray-600">
+                        <li>• Zoológico y Jardín UNAS</li>
+                        <li>• Honolulu y Ninfas</li>
+                        <li>• Catarata Sta. Carmen</li>
+                    </ul>
+                    <div class="text-2xl font-bold text-orange-600 mb-6 text-center">S/ 110.00 <span class="text-sm text-gray-400">/persona</span></div>
+                    <a href="https://wa.me/51999999999?text=Hola,%20quiero%20reservar%20el%20Paquete%202" class="block w-full text-center bg-green-700 text-white py-3 rounded-xl font-bold hover:bg-green-800">Reservar ahora</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white text-gray-800 p-6 rounded-2xl card-tour">
+                    <h3 class="font-bold text-xl mb-4 text-green-800">Paquete 3: Relax</h3>
+                    <ul class="text-sm space-y-2 mb-6 text-gray-600">
+                        <li>• Mariposario Montealto</li>
+                        <li>• Laguna de los Milagros</li>
+                        <li>• Mirador Bella Durmiente</li>
+                    </ul>
+                    <div class="text-2xl font-bold text-orange-600 mb-6 text-center">S/ 95.00 <span class="text-sm text-gray-400">/persona</span></div>
+                    <a href="https://wa.me/51999999999?text=Hola,%20quiero%20reservar%20el%20Paquete%203" class="block w-full text-center bg-green-700 text-white py-3 rounded-xl font-bold hover:bg-green-800">Reservar ahora</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white text-gray-800 p-6 rounded-2xl card-tour">
+                    <h3 class="font-bold text-xl mb-4 text-green-800">Paquete 4: Familiar</h3>
+                    <ul class="text-sm space-y-2 mb-6 text-gray-600">
+                        <li>• Villaverde y Canopy</li>
+                        <li>• Cueva de las Pavas</li>
+                        <li>• Alameda del Perú</li>
+                    </ul>
+                    <div class="text-2xl font-bold text-orange-600 mb-6 text-center">S/ 85.00 <span class="text-sm text-gray-400">/persona</span></div>
+                    <a href="https://wa.me/51999999999?text=Hola,%20quiero%20reservar%20el%20Paquete%204" class="block w-full text-center bg-green-700 text-white py-3 rounded-xl font-bold hover:bg-green-800">Reservar ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Adicionales -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-gray-50 p-8 rounded-3xl border-l-8 border-orange-500">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">Servicio VIP de Llegada</h3>
+                <p class="text-gray-600 mb-4 text-lg">
+                    Te recogemos desde el <strong>Aeropuerto</strong> o <strong>Terminal Terrestre</strong> al llegar a la ciudad. Brindamos traslado personalizado y seguro hasta tu alojamiento.
+                </p>
+                <div class="flex items-center text-green-700 font-bold">
+                    <i class="fas fa-car mr-2"></i> Traslado privado incluido en reservas grupales.
+                </div>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-3xl border-l-8 border-green-700">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">Asesoría en Alojamiento</h3>
+                <p class="text-gray-600 mb-4 text-lg">
+                    ¿No sabes dónde quedarte? Brindamos servicio de guiado para elegir el hospedaje perfecto según tus necesidades, presupuesto y cercanía a los tours.
+                </p>
+                <div class="flex items-center text-orange-600 font-bold">
+                    <i class="fas fa-hotel mr-2"></i> Consultoría gratuita con tu primer paquete.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contacto" class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 bg-white p-10 rounded-3xl shadow-lg">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold text-green-900 mb-4">Reservación Especial</h2>
+                <p class="text-gray-500">Envíanos tus datos y armamos un itinerario a tu medida.</p>
+            </div>
+            <form action="#" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Nombre completo</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Correo electrónico</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Fecha tentativa de viaje</label>
+                    <input type="date" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">¿En qué paquetes estás interesado?</label>
+                    <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-500 outline-none" placeholder="Ej: Paquete 2 y 3 para 4 personas..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition shadow-lg shadow-orange-200">
+                    Enviar solicitud de reserva
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 bg-green-800 text-center text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">No vengas a Tingo María a improvisar.</h2>
+            <p class="text-xl text-green-200 mb-10 leading-relaxed">Vive la experiencia completa con nosotros. Seguridad, conocimiento local y pasión por la selva.</p>
+            <a href="https://wa.me/51999999999" class="inline-block bg-white text-green-900 px-12 py-5 rounded-full text-2xl font-bold hover:bg-gray-100 transition-all transform hover:scale-105">
+                <i class="fab fa-whatsapp mr-3"></i> Reserva ahora por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-gray-400 text-center">
+        <div class="mb-6">
+            <span class="text-2xl font-bold text-white">Mi Selva <span class="text-orange-500">&</span> Yo</span>
+        </div>
+        <div class="flex justify-center space-x-6 mb-8 text-xl">
+            <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-white"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p class="text-sm">&copy; 2026 Mi Selva y Yo. Todos los derechos reservados.</p>
+        <p class="text-xs mt-2 uppercase tracking-tighter">Tingo María - Huánuco - Perú</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51999999999" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
